@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestTransition</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="fragment">FRAGMENT</string>
+    <string name="click_on_the_image_to_zoom_in">Click on the image to zoom in</string>
+    <string name="second_activity">SECOND ACTIVITY</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="for_a_demo_of_shared_element_transition_click_the_image_below">For a demo of Shared Element Transition, click the image below</string>
+    <string name="info">Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is developed by a consortium of developers known as the Open Handset Alliance, with the main contributor and commercial marketer being Google.</string>
+</resources>
