@@ -12,12 +12,19 @@ class Activity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
-        val androidImageView=findViewById<ImageView>(R.id.android)
+        val androidImageView = findViewById<ImageView>(R.id.android)
 
         androidImageView.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                startActivity(Intent(this,Activity3::class.java), ActivityOptions.makeSceneTransitionAnimation(this, androidImageView,"android").toBundle())
-            }
+                startActivity(
+                    Intent(this, Activity3::class.java),
+                    ActivityOptions.makeSceneTransitionAnimation(
+                        this,
+                        androidImageView,
+                        "android"
+                    ).toBundle()
+                )
+            } else startActivity(Intent(this, Activity3::class.java))
         }
     }
 }

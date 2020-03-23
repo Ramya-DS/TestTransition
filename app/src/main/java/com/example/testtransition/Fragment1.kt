@@ -1,6 +1,7 @@
 package com.example.testtransition
 
 
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.transition.Fade
@@ -34,8 +35,14 @@ class Fragment1 : Fragment() {
                 it.duration = 100
                 it
             }
-            activity!!.supportFragmentManager.beginTransaction().replace(R.id.container, fragment2)
-                .addToBackStack(null).addSharedElement(imageView, "android").commit()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container, fragment2)
+                    .addToBackStack(null).addSharedElement(imageView, "android").commit()
+            }
+            else{
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container, fragment2)
+                    .addToBackStack(null).commit()
+            }
         }, 500)
 
 
