@@ -27,4 +27,9 @@ class Activity2 : AppCompatActivity() {
             } else startActivity(Intent(this, Activity3::class.java))
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.left_in,R.anim.right_out)
+    }
 }

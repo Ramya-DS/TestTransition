@@ -7,28 +7,32 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@id/second_activity"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary"
-        app:title="TRANSITION DEMO"
-        android:id="@+id/toolbar"/>
+        app:title="TRANSITION DEMO" />
 
     <Button
         android:id="@+id/second_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
         android:text="@string/activity"
+        app:layout_constraintBottom_toTopOf="@id/fragment"
         app:layout_constraintEnd_toStartOf="@id/fragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toTopOf="@id/fragment"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <Button
         android:id="@+id/fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
         android:text="@string/fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/second_activity"

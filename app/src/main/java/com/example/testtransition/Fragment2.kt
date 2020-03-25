@@ -3,6 +3,7 @@ package com.example.testtransition
 
 import android.content.Context
 import android.os.Bundle
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,18 +20,8 @@ class Fragment2 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment2, container, false)
-    }
+        val rootView = inflater.inflate(R.layout.fragment_fragment2, container, false)
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                fragmentManager!!.popBackStackImmediate(null, POP_BACK_STACK_INCLUSIVE)
-            }
-
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+        return rootView
     }
 }

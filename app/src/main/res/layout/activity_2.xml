@@ -17,12 +17,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="30dp"
         android:text="@string/for_a_demo_of_shared_element_transition_click_the_image_below"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        android:padding="30dp"
-        android:typeface="serif"/>
+        android:typeface="serif" />
 
     <ImageView
         android:id="@+id/android"
